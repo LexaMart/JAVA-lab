@@ -11,7 +11,7 @@ abstract class Food implements Consumable, Nutritious {
 
     @Override
     public void consume() {
-        System.out.println(this.name + "has been drunken");
+        System.out.println(this.name + " has been drunken");
     }
 
     @Override
@@ -23,8 +23,8 @@ abstract class Food implements Consumable, Nutritious {
         }
     }
 
-    public void getFoodName() {
-        System.out.println(this.name);
+    public String getFoodName() {
+        return this.name;
     }
 
 }

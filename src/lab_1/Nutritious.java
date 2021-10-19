@@ -7,7 +7,10 @@ public interface Nutritious {
     enum Item {
         Chokolate(500),
         Default(350),
-        NoFat(25);
+        NoFat(25),
+        Cheese(200),
+        BigApple(50),
+        SmallApple(25);
 
 
         public final int calories;

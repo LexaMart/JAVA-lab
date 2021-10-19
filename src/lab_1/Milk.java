@@ -5,7 +5,7 @@ public class Milk extends Food {
     static private int glassesOfMilk = 0;
 
     public Milk (int fat, String milkName) {
-        super(milkName + "Milk");
+        super(milkName + " Milk");
         this.fat = fat;
         this.glassesOfMilk += 1;
     }
