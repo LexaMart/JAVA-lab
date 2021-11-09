@@ -86,7 +86,7 @@ public class GornerTableModel extends AbstractTableModel {
                 return "Значение многочлена по схеме Горнера";
             }
             case 2: {
-                return "Значение многочлена возведением в степень";
+                return "Значение многочлена по схеме Горнера с Float";
             }
             case 3: {
                 return "Разница";
