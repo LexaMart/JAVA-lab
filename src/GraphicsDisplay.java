@@ -46,6 +46,7 @@ public class GraphicsDisplay extends JPanel {
     // Различные стили черчения линий
 
     private BasicStroke graphicsStroke;
+    private BasicStroke graphicStroke2;
     private BasicStroke axisStroke;
     private boolean turnGraph = false;
     private BasicStroke markerStroke;
@@ -59,6 +60,10 @@ public class GraphicsDisplay extends JPanel {
         setBackground(Color.WHITE);
 // Сконструировать необходимые объекты, используемые в рисовании
 // Перо для рисования графика
+
+        graphicStroke2 = new BasicStroke(1.0f, BasicStroke.CAP_BUTT,
+                BasicStroke.JOIN_ROUND, 10.0f, new float[] {10, 10, 10, 30, 30, 30, 30, 30, 30,30,30,30}, 0.0f);
+
 
         graphicsStroke = new BasicStroke(2.0f, BasicStroke.CAP_BUTT,
 
@@ -173,7 +178,7 @@ minY
             }
             if (scale == scaleY) {
 // Если за основу был взят масштаб по оси Y, действовать по аналогии
-                double xIncrement = (getSize().getWidth() / scale - (maxX - minX)) / 4;// тут въебать /4 и дописать if
+                double xIncrement = (getSize().getWidth() / scale - (maxX - minX)) / 2;// тут въебать /4 и дописать if
                 maxX += xIncrement;
                 minX -= xIncrement;
             }
@@ -242,7 +247,7 @@ minY
                 minY -= yIncrement;
             }
             if (scale == scaleY) {
-                double xIncrement = (getSize().getWidth() / scale - (maxX - minX)) / 4;
+                double xIncrement = (getSize().getWidth() / scale - (maxX - minX)) / 2;
                 maxX += xIncrement;
                 minX -= xIncrement;
             }
@@ -336,6 +341,7 @@ minY
         }
         canvas.draw(graphics);
         canvas.setColor(Color.red);
+        canvas.setStroke(graphicStroke2);
         canvas.draw(graphics2);
     }
 

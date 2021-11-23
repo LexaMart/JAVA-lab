@@ -21,8 +21,8 @@ import javax.swing.event.MenuListener;
 @SuppressWarnings("serial")
 public class MainFrame extends JFrame {
     // Начальные размеры окна приложения
-    private static final int WIDTH = 900;
-    private static final int HEIGHT = 600;
+    private static final int WIDTH = 600;
+    private static final int HEIGHT = 500;
 // Объект диалогового окна для выбора файлов
     private JFileChooser fileChooser = null;
     private JCheckBoxMenuItem showAxisMenuItem;
